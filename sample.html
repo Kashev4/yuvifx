@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuvi FX Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+<style>
+* {
+  cursor: none !important;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#0a0a0a;color:#fff;overflow-x:hidden;cursor:none}
+#custom-cursor{position:fixed;top:0;left:0;width:20px;height:20px;border-radius:50%;background:rgba(255,51,0,0.8);border:2px solid #ffcc00;pointer-events:none;transform:translate(-50%,-50%);transition:width 0.2s ease,height 0.2s ease,background 0.2s ease,box-shadow 0.2s ease;z-index:10000;box-shadow:0 0 10px rgba(255,51,0,0.7),0 0 20px rgba(255,204,0,0.4)}
+#custom-cursor::after{content:'';position:absolute;top:50%;left:50%;width:6px;height:6px;background:#ffcc00;border-radius:50%;transform:translate(-50%,-50%);transition:all 0.2s ease}
+#particles-js{position:fixed;width:100%;height:100%;z-index:-1;top:0;left:0}
+header{text-align:center;padding:100px 20px;background:linear-gradient(135deg,rgba(128,0,0,0.9),rgba(200,0,0,0.9));background-size:400% 400%;animation:gradientMove 8s ease infinite;border-bottom:2px solid rgba(255,255,255,0.1)}
+@keyframes gradientMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+header h1{font-size:4em;font-weight:900;color:#fff;letter-spacing:2px}
+header p{font-size:1.5em;margin:15px 0;opacity:.9}
+header a{display:inline-block;margin:15px;padding:12px 28px;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.3);color:#fff;border-radius:12px;font-weight:bold;text-decoration:none;transition:.3s}
+header a:hover{background:#ff3300;box-shadow:0 0 20px #ff3300;transform:scale(1.05)}
+section{padding:80px 20px;max-width:1100px;margin:auto}
+h2{font-size:2.5em;margin-bottom:30px;text-align:center;color:#ffcc00}
+#about p{font-size:1.2em;text-align:center;margin-bottom:15px}
+#services ul{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px;list-style:none}
+#services li{background:rgba(255,255,255,0.05);padding:20px;border-radius:15px;text-align:center;font-size:1.1em;border:1px solid rgba(255,255,255,0.1);backdrop-filter:blur(8px);transition:.4s;opacity:0;transform:translateY(40px)}
+#services li.show{opacity:1;transform:translateY(0)}
+#services li:hover{transform:translateY(-10px) scale(1.05);box-shadow:0 0 25px rgba(255,85,0,0.7)}
+.pricing{background:rgba(255,255,255,0.05);padding:40px;border-radius:20px;backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.1);box-shadow:0 0 20px rgba(200,0,0,0.5);text-align:center;transition:.6s;opacity:0;transform:scale(0.9) translateY(40px)}
+.pricing.show{opacity:1;transform:scale(1) translateY(0)}
+.pricing h3{margin:20px 0;color:#ffcc00}
+.btn{display:inline-block;margin-top:20px;padding:12px 30px;border-radius:30px;background:linear-gradient(45deg,#ff3300,#990000);color:#fff;font-weight:bold;text-decoration:none;transition:.3s;box-shadow:0 0 15px rgba(255,85,0,0.6)}
+.btn:hover{box-shadow:0 0 25px rgba(255,85,0,1),0 0 35px rgba(200,0,0,1);transform:scale(1.1)}
+#portfolio p{text-align:center;font-size:1.2em}
+#contact p{text-align:center;font-size:1.2em;margin:10px 0}
+#contact a{margin:10px}
+footer{text-align:center;padding:30px;background:#0d0d0d;border-top:1px solid rgba(255,255,255,0.1);font-size:.9em;opacity:.7}
+@media (max-width: 600px){
+header{padding:60px 15px}
+header h1{font-size:2.5em}
+header p{font-size:1.2em}
+header a{padding:10px 20px;font-size:.9em}
+section{padding:50px 15px}
+#services ul{grid-template-columns:1fr;gap:15px}
+.pricing{padding:25px 20px}
+.btn{padding:10px 20px;font-size:.9em}
+}
+</style>
+</head>
+<body>
+<div id="custom-cursor"></div>
+<div id="particles-js"></div>
+<header>
+<h1>YUVI FX STUDIO</h1>
+<p>✨ Transforming Imagination into Reality ✨</p>
+<a href="#services">See My Work</a>
+<a href="#contact">Contact Me</a>
+</header>
+<section id="about">
+<h2>About Me</h2>
+<p>Hi, I’m Yuvraj – a creative video and photo editor. I create professional edits for Instagram Reels, YouTube, weddings, gaming, and more.</p>
+<p>✅ Fast Delivery | ✅ Affordable Pricing | ✅ Professional Quality</p>
+</section>
+<section id="services">
+<h2>Services</h2>
+<ul>
+<li>🎬 Velocity Edits</li>
+<li>⚡ VFX Edits</li>
+<li>🖼 Photoshop Edits</li>
+<li>🎶 Beat Sync Edits</li>
+<li>🎭 Cinematic Color Grading</li>
+<li>🎮 Gaming Montages</li>
+<li>🎤 Event & Function Edits</li>
+<li>📸 Custom Edits</li>
+</ul>
+<div style="text-align:center;"><a href="#portfolio" class="btn">View Portfolio</a></div>
+</section>
+<section id="pricing">
+<h2>Pricing</h2>
+<div class="pricing">
+<p>🎬 Single Edit → ₹300+</p>
+<p>⚡ Premium Edit (VFX / Cinematic) → ₹500–₹800</p>
+<p>🖼 Photoshop Poster/Thumbnail → ₹200</p>
+<hr style="border-color:rgba(255,255,255,0.1);margin:20px 0">
+<h3>🔥 Monthly Pack – ₹2000</h3>
+<p>✔ 10 edits of ANY type<br>✔ Priority Delivery<br>✔ Unlimited Creativity</p>
+<a href="#contact" class="btn">Book Now</a>
+</div>
+</section>
+<section id="portfolio">
+<h2>Portfolio</h2>
+<p>👉 Check out my latest edits on Instagram!</p>
+<div style="text-align:center;"><a href="https://instagram.com/yuvi_fx_studio" class="btn">Follow on Instagram</a></div>
+</section>
+<section id="contact">
+<h2>Contact Me</h2>
+<p>📧 Email: bhauyuvraj81@icloud.com</p>
+<p>📱 WhatsApp: ‪+91 95964-90881‬</p>
+<p>📷 Instagram: <a href="https://instagram.com/yuvi_fx_studio" target="_blank">@yuvi_fx_studio</a></p>
+<div style="text-align:center;">
+<a href="https://instagram.com/yuvi_fx_studio" class="btn">DM on Instagram</a>
+<a href="mailto:youremail@example.com" class="btn">Send Email</a>
+</div>
+</section>
+<footer>
+<p>© 2025 Yuvi FX Studio | All Rights Reserved</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js",{"particles":{"number":{"value":80},"size":{"value":3},"color":{"value":"#ff3300"},"line_linked":{"enable":true,"color":"#990000"},"move":{"enable":true,"speed":2}}});
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add("show")})},{threshold:0.2});
+document.querySelectorAll("#services li,.pricing").forEach(el=>observer.observe(el));
+const cursor=document.getElementById('custom-cursor');
+let mouseX=0,mouseY=0,currentX=0,currentY=0;
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+
+document.querySelectorAll('a,.btn').forEach(el=>{el.addEventListener('mouseenter',()=>{cursor.style.width='40px';cursor.style.height='40px';cursor.style.background='rgba(255,204,0,0.8)';cursor.style.boxShadow='0 0 20px rgba(255,204,0,0.9),0 0 30px rgba(255,51,0,0.6)';});el.addEventListener('mouseleave',()=>{cursor.style.width='20px';cursor.style.height='20px';cursor.style.background='rgba(255,51,0,0.8)';cursor.style.boxShadow='0 0 10px rgba(255,51,0,0.7),0 0 20px rgba(255,204,0,0.4)';});});
+</script>
+</body>
+</html>
